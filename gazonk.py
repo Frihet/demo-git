@@ -11,6 +11,8 @@ import utils.hash
 import time
 import sys
 
+sys.exit()
+
 class Peer(Node):
     class Meta:
         unique_together = (("local", "node_id",),)
