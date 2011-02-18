@@ -12,7 +12,7 @@ class Document(fcdjangoutils.signalautoconnectmodel.SharedMemorySignalAutoConnec
 
     @classmethod
     def get_document(cls, document_id, content = None):
-        is_new = False
+        is_new = True
         docs = Document.objects.filter(
             document_id = document_id).all()
         if docs:
