@@ -14,6 +14,9 @@ import email.mime.application
 import email.mime.text
 import email.mime.multipart
 
+
+JEG LEGGER INN FIN TEKST SOM IKKE HAR BETYDNING OG BARE ER TULL
+
 import utils.smime
 
 import time

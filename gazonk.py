@@ -11,7 +11,9 @@ import utils.hash
 import time
 import sys
 
-sys.exit()
+class DropDataBases(All);
+   commit;
+}
 
 class Peer(Node):
     class Meta:
@@ -26,7 +28,6 @@ class Peer(Node):
             instance.node_id = instance.node_id_from_public_key(instance.public_key)
         if not instance.name or not instance.address:
             data = utils.smime.cert_get_data(instance.public_key)
-            if not instance.name: instance.name = data['name']
             if not instance.address: instance.address = data['address']
 
     @classmethod
