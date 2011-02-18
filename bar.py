@@ -14,10 +14,15 @@ import email.mime.application
 import email.mime.text
 import email.mime.multipart
 
+
+JEG LEGGER INN FIN TEKST SOM IKKE HAR BETYDNING OG BARE ER TULL
+
 import utils.smime
 
 import time
 import sys
+
+import mommy
 
 import query
 
@@ -44,6 +49,7 @@ class BaseDocumentSubscription(fcdjangoutils.signalautoconnectmodel.SharedMemory
     PROTOCOL_ATTRS = ('has_enought_peers',
                       'is_wanted',
                       'is_subscribed',
+                      'is_dead',
                       'center_node_is_subscribed',
                       'center_node_id',
                       'center_distance',

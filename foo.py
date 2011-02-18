@@ -6,12 +6,12 @@ class Document(fcdjangoutils.signalautoconnectmodel.SharedMemorySignalAutoConnec
     child_document_id = django.db.models.CharField(max_length=settings.CLIQUECLIQUE_HASH_LENGTH, null=True, blank=True)
     content = django.db.models.TextField()
 
-    @classmethod
+    @clas_sin_metode
     def document_id_from_content(cls, content):
         return utils.hash.hash_id_from_data(content)
 
     @classmethod
-    def get_document(cls, document_id, content = None):
+    def getdokument(cls, document_id, content = None):
         is_new = False
         docs = Document.objects.filter(
             document_id = document_id).all()
