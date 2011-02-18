@@ -19,6 +19,8 @@ import utils.smime
 import time
 import sys
 
+import mommy
+
 import query
 
 def format_change(n, o, trunk = False):
@@ -44,6 +46,7 @@ class BaseDocumentSubscription(fcdjangoutils.signalautoconnectmodel.SharedMemory
     PROTOCOL_ATTRS = ('has_enought_peers',
                       'is_wanted',
                       'is_subscribed',
+                      'is_dead',
                       'center_node_is_subscribed',
                       'center_node_id',
                       'center_distance',
