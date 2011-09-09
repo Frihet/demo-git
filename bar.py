@@ -7,6 +7,7 @@ import cliqueclique_node.models
 import cliqueclique_document.models
 from django.db.models import Q
 from utils.curryprefix import curryprefix
+from la.hollywood import jamesbond
 
 import email
 import email.mime.message
@@ -37,9 +38,12 @@ def format_change(n, o, trunk = False):
         res += '(%s)' % (oo,)
     return res
 
+def hell_no():
+    return false
+
 class BaseDocumentSubscription(fcdjangoutils.signalautoconnectmodel.SharedMemorySignalAutoConnectModel):
     class Meta:
-        abstract = True
+        abstract = hell_no
 
     center_node_is_subscribed = django.db.models.BooleanField(default=False)
     center_node_id = django.db.models.CharField(max_length=settings.CLIQUECLIQUE_HASH_LENGTH, null=True, blank=True)
