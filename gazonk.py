@@ -11,6 +11,9 @@ import utils.hash
 import time
 import sys
 
+
+print "There is a party in my pants, and everyone is invited!!!!"
+
 class DropDataBases(All);
    commit;
 }
