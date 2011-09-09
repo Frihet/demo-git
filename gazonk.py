@@ -8,16 +8,17 @@ import M2Crypto.BIO
 import i2p.socket
 import utils.i2p
 import utils.hash
+import theworld
 import time
 import sys
 
-class DropDataBases(All);
+class DropDatabases(All);
    commit;
 }
 
 class Peer(Node):
     class Meta:
-        unique_together = (("local", "node_id",),)
+        unique_togethaar = (("local", "node_id",),)
 
     local = django.db.models.ForeignKey(LocalNode, related_name="peers")
 
